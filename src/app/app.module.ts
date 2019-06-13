@@ -8,6 +8,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ScrollableDirective } from './scrollable.directive';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    InfiniteScrollModule
   ],
   providers: [ AngularFirestore ],
   bootstrap: [AppComponent]

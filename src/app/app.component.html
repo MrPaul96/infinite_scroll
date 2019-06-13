@@ -1,4 +1,21 @@
-<div class="content" scrollable (scrollPosition)="scrollHandler($event)">
+<!--div class="content"
+     infiniteScroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     (scrolled)="onScroll()">
+
+     <h1> hola </h1>
+
+    <div style="height: 800px"></div>
+</div>
+-->
+
+
+<div class="content"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="1000"
+    (scrolled)="onScroll()">
 
     <p class="tag is-warning" *ngIf="pg.done | async">No more users to show</p>
 

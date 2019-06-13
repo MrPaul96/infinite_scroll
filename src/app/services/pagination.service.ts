@@ -28,6 +28,7 @@ export class PaginationService {
   constructor(public afs: AngularFirestore) { }
 
   init() {
+    console.log('hl');
     const first = this.afs.collection('users', ref => ref.limit(this.batchSize) );
 
     this.mapAndUpdate(first);
@@ -48,6 +49,8 @@ export class PaginationService {
     const cursor = this.getCursor();
 
     console.log('getMore Users');
+
+    console.log(cursor);
 
     if (cursor) {
       const more = this.afs.collection('users', ref => {
